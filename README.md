@@ -1,14 +1,16 @@
 [![Build Status](https://travis-ci.org/luckymarmot/Paw-HexToBase64DynamicValue.svg?branch=master)](https://travis-ci.org/luckymarmot/Paw-HexToBase64DynamicValue)
 
-# Base 64 to Hex Dynamic Value (Paw Extension)
+# Hex to Base 64 Dynamic Value (Paw Extension)
 
-A [Paw Extension](http://luckymarmot.com/paw/extensions/) that converts Base 64 encoded strings to hexadecimal. This handles binary data correctly.
+A [Paw Extension](http://luckymarmot.com/paw/extensions/) that converts hexadecimal encoded strings to Base 64. This handles binary data correctly.
 
-For example, your Base 64 input is: `AAECAwQ=` (which is the Base 64 encoding of the byte string `\0\1\2\3\4`), the result will be `hex("\0\1\2\3\4")` which is `0001020304`.
+For example, your hexadecimal input is: `696c6f7665706177` (which is the hexadecimal encoding of the byte string `ilovepaw`), the result will be `base64("ilovepaw")` which is `aWxvdmVwYQ==`.
+
+If you're looking for the opposite behavior (Base 64 to hexadecimal), you should probably use the [Base 64 to hexadecimal Dynamic Value](https://github.com/luckymarmot/Paw-Base64ToHexDynamicValue).
 
 ## Installation
 
-Easily install this Paw Extension: [Install Base 64 to Hex Dynamic Value](http://luckymarmot.com/paw/extensions/HexToBase64DynamicValue)
+Easily install this Paw Extension: [Install Hex to Base 64 Dynamic Value](http://luckymarmot.com/paw/extensions/HexToBase64DynamicValue)
 
 ## Development
 
