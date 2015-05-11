@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '0.10'
+before_install:
+- npm install coffee-script
+before_script:
+- ./node_modules/.bin/cake archive
+script:
+- ./node_modules/.bin/cake test
+deploy:
+  provider: releases
+  api_key:
+    secure: OiPSuQIvuIYtCtVT70anws/kTfBSnqQSO03wTD95spHa9oCleL71ojxdyQAkEls2fNlwEiXozSvmHCmjfyJXrLRpE8BMhI5NbllW6CqD/3ojfQ587DYPlvylg0kG1MU4Xe2t5p6n+7lEXVNZNdDZkuNWh7b2CeIcDi/dJ0Or5obDLHagvdojO82SNOciH8p4lENOZary48VRUnjLahKGVxXpLDsOkl3gLTAUXCpwyu06bEo4RfcCer7jC7umj8zziAXXZKsweJransk/CbrslYUh+OH9fQ0lVQeLj1RycwC7QIrqtFRDRK6bhTHuuuLbosCi1Ymk8owKQCdh34S2tdceSyduJn6mdLYStpUjphzgWK8WXbyajHjFFJVl8q/M3AuoASwiiPAugkmoAoyqZR+LRa6En1AMUa1KPnbWgJqoMaragFbiuJmgs49H9WSlcCeO4TkglUHSsBZZ7LnsbnWvzwg0LxWVvFdsQv9XHJlPdGBk/ZQJHZdabzAjhdGpouq6DWCm60Qx2Itnmz+e24oG7J0ScXdGq9VK+R9updc++J6opsSbLWr5EMD8jcfhSOOiDO5x8+mkMTs8RbRL8DZS4ZquzDIyIbNQHVILrlYbAUG9VdA26VE5Ekee10qoKZi0A5p8UL4JtcxMc5Cf7utqgqlkdZJUohSIy9boc9w=
+  file: build/HexToBase64DynamicValue.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+    repo: luckymarmot/Paw-HexToBase64DynamicValue
