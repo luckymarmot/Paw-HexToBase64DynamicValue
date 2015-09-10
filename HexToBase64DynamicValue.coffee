@@ -1,4 +1,10 @@
-require "b64.js"
+# in API v0.2.0 and below (Paw 2.2.2 and below), require had no return value
+((root) ->
+  if root.bundle?.minApiVersion('0.2.0')
+    root.base64js = require("./b64")
+  else
+    require("b64.js")
+)(this)
 
 HexToBase64DynamicValue = () ->
 
